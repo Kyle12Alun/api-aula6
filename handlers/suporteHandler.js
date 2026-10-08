@@ -1,8 +1,10 @@
+const suporteService = require('../services/tecnicoService')
+
 function suporteN1(chamado){
     console.log("N1 recebeu o chamado");
     if(chamado.prioridade == "normal") {
         console.log("N1 assumiu o chamado");
-        return "Suporte N1";
+        return tecnicoService.buscaPorEspecialidade(chamado.buscaPorEspecialidade);
     }
     console.log("N1 não conseguiu resolver");
     console.log("Encaminhado para N2");
